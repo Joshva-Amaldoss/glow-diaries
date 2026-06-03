@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  email        String        @unique
+  passwordHash String
+  role         String        @default("USER")
+  createdAt    DateTime      @default(now())
+  profile      Profile?
+  assessments  Assessment[]
+  weeklyReports WeeklyReport[]
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  age       Int
+  gender    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String
+  benefits    String
+  skinTypes   String
+  concerns    String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Assessment {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  facialType      String?
+  problems        String?
+  imagePath       String?
+  faceTypeResult  String
+  analysisSummary String
+  recommendations String
+  imageMetrics    String?
+  aiInsight       String?
+  analysisSource  String   @default("local")
+  createdAt       DateTime @default(now())
+}
+
+model WeeklyReport {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  weekNumber      Int
+  imagePath       String?
+  skinScore       Float
+  hydrationScore  Float
+  clarityScore    Float
+  notes           String?
+  comparisonNotes String?
+  createdAt       DateTime @default(now())
+
+  @@unique([userId, weekNumber])
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
