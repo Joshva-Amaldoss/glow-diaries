@@ -266,7 +266,7 @@ export default async function HomePage() {
   </div>
 
   <div className="mt-8 border-t pt-4 text-center text-sm text-[var(--muted)]">
-    © 2026 Glow Diaries. All rights reserved.
+    © 2026 Glow Diaries Healthcare. All rights reserved.
   </div>
 </footer>
 <a
