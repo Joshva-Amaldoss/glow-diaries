@@ -3,6 +3,7 @@ import { isAdmin } from "@/lib/admin";
 import { getSession } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { AdminMessages } from "@/components/AdminMessages";
+import Link from "next/link";
 
 export default async function AdminPage() {
   const session = await getSession();
@@ -55,15 +56,16 @@ export default async function AdminPage() {
         <h2 className="font-semibold text-[var(--brand)]">Quick links</h2>
         <ul className="mt-3 flex flex-wrap gap-3 text-sm">
           <li>
-            <a href="/products/manage" className="text-[var(--brand)] hover:underline">
-              Product CRUD
-            </a>
-          </li>
-          <li>
-            <a href="/products" className="text-[var(--brand)] hover:underline">
-              Public catalog
-            </a>
-          </li>
+  <Link href="/products/manage" className="text-[var(--brand)] hover:underline">
+    Product CRUD
+  </Link>
+</li>
+
+<li>
+  <Link href="/products" className="text-[var(--brand)] hover:underline">
+    Public catalog
+  </Link>
+</li>
         </ul>
       </section>
 
