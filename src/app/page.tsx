@@ -12,7 +12,7 @@ export default async function HomePage() {
           <p className="text-sm font-medium uppercase tracking-wide text-[var(--brand)]">
             AI Powered Ayurvedic Skincare
           </p>
-          <h1 className="text-5xl font-bold leading-tight text-[var(--text)]">
+          <h1 className="text-6xl font-bold leading-tight text-[var(--text)]">
             Discover Your Natural Glow
           </h1>
          <p className="text-lg text-[var(--muted)]">
@@ -43,19 +43,12 @@ export default async function HomePage() {
             </Link>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-  {["cleanser", "toner", "serum", "moisturizer"].map((product) => (
-    <div
-      key={product}
-      className="overflow-hidden rounded-2xl bg-white shadow-md"
-    >
-      <img
-        src={`/products/${product}.png`}
-        alt={product}
-        className="h-40 w-full object-cover"
-      />
-    </div>
-  ))}
+          <div className="flex justify-center">
+  <img
+    src="/hero-model.png"
+    alt="Glow Diaries Model"
+    className="max-h-[520px] w-auto rounded-3xl object-cover shadow-xl hover:scale-105 transition duration-500"
+  />
 </div>
         </div>
       </section>
@@ -81,6 +74,84 @@ export default async function HomePage() {
           </article>
         ))}
       </section>
+      <section className="card">
+  <h2 className="text-center text-3xl font-bold text-[var(--brand)]">
+    Why Choose Glow Diaries?
+  </h2>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    
+    <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+      <h3 className="text-xl font-semibold text-[var(--brand)]">
+        AI Skin Analysis
+      </h3>
+      <p className="mt-2 text-[var(--muted)]">
+        Get personalized skincare recommendations based on your skin type and concerns.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+      <h3 className="text-xl font-semibold text-[var(--brand)]">
+        Ayurvedic Ingredients
+      </h3>
+      <p className="mt-2 text-[var(--muted)]">
+        Natural formulations inspired by traditional Ayurvedic skincare practices.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+      <h3 className="text-xl font-semibold text-[var(--brand)]">
+        Track Your Progress
+      </h3>
+      <p className="mt-2 text-[var(--muted)]">
+        Monitor your skincare journey with weekly reports and progress updates.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section className="card">
+  <h2 className="text-center text-3xl font-bold text-[var(--brand)]">
+    What Our Customers Say
+    <p className="mt-2 text-center text-[var(--muted)]">
+  Trusted by skincare enthusiasts who want healthier, naturally glowing skin.
+</p>
+  </h2>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    
+    <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+      <p className="text-yellow-500 text-xl">★★★★★</p>
+      <p className="mt-3 text-[var(--muted)]">
+        My skin feels healthier and brighter after just a few weeks. The AI recommendations were surprisingly accurate.
+      </p>
+      <p className="mt-4 font-semibold text-lg text-[var(--brand)]">
+        Priya S.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+      <p className="text-yellow-500 text-xl">★★★★★</p>
+      <p className="mt-3 text-[var(--muted)]">
+        I loved how simple the skincare routine was. My skin feels more hydrated and balanced now.
+      </p>
+      <p className="mt-4 font-semibold text-lg text-[var(--brand)]">
+        Rahul K.
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1">
+      <p className="text-yellow-500 text-xl">★★★★★</p>
+      <p className="mt-3 text-[var(--muted)]">
+        The weekly progress tracking helped me stay consistent. Highly recommended for beginners.
+      </p>
+      <p className="mt-4 font-semibold text-lg text-[var(--brand)]">
+        Ananya M.
+      </p>
+    </div>
+
+  </div>
+</section>
       <section className="space-y-6">
         <h2 className="text-center text-3xl font-bold text-[var(--brand)]">
           Our Skincare Routine
@@ -168,7 +239,7 @@ export default async function HomePage() {
   </a>
 
   <a
-    href="https://instagram.com/iam_jozva"
+    href="https://instagram.com/_.glowdiaries._"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -180,7 +251,7 @@ export default async function HomePage() {
   </a>
 
   <a
-    href="https://wa.me/919976054047"
+    href="https://wa.me/919976*****"
     target="_blank"
     rel="noopener noreferrer"
   >
