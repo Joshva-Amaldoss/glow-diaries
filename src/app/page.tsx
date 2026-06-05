@@ -219,7 +219,7 @@ export default async function HomePage() {
       </h3>
 
       {/*<p className="mt-2 text-[var(--muted)]">
-        jozva2005@gmail.com
+        glowdiaries26@gmail.com
       </p>*/}
 
       <p className="text-[var(--muted)]">
@@ -227,7 +227,7 @@ export default async function HomePage() {
       </p>
       <div className="mt-4 flex gap-4">
   <a
-    href="mailto:jozva2005@gmail.com"
+    href="mailto:glowdiaries26@gmail.com"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -251,7 +251,7 @@ export default async function HomePage() {
   </a>
 
   <a
-    href="https://wa.me/919976*****"
+    href="https://wa.me/919578721584"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -270,7 +270,7 @@ export default async function HomePage() {
   </div>
 </footer>
 <a
-  href="https://wa.me/919976054047"
+  href="https://wa.me/919578721584"
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-6 right-6 z-50"
